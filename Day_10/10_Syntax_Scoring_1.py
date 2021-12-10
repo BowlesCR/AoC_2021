@@ -1,9 +1,7 @@
-from collections import deque
 import fileinput
 
 
 def main() -> None:
-
     score = 0
     line: str
     for line in fileinput.input():
@@ -13,7 +11,7 @@ def main() -> None:
 
 
 def checkline(line: str) -> int:
-    stack = deque()
+    stack: list[str] = []
     for c in line.strip():
         if c in ["(", "[", "{", "<"]:
             stack.append(c)

@@ -1,6 +1,5 @@
-import statistics
-from collections import deque
 import fileinput
+import statistics
 
 
 def main() -> None:
@@ -15,7 +14,7 @@ def main() -> None:
 
 
 def checkline(line: str) -> int:
-    stack = deque()
+    stack: list[str] = []
     for c in line.strip():
         if c in ["(", "[", "{", "<"]:
             stack.append(c)
